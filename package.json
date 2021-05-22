@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "<!-- Please update value in the {}  -->",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
   "devDependencies": {
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
