@@ -1,17 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ScheduleIcon } from "../assets";
 
 const Card = () => {
   return (
     <Wrapper>
-     <Image src="https://source.unsplash.com/random"/>
-     <Content>
-     <Label>kaisto</Label>
-     <Title>Senior Engineer</Title>
-     <Button>Hey</Button>
-        {/* <ContentBottom>
-        </ContentBottom> */}
+      <Image src="https://source.unsplash.com/random"/>
+      <Content>
+        <Label>kaisto</Label>
+        <Title>Senior Engineer</Title>
+        <Button>Hey</Button>
       </Content>
+      <MutedText>
+        <ScheduleIcon />
+      </MutedText>
     </Wrapper>
   )
 }
@@ -48,8 +50,10 @@ const Title = styled.h2`
   margin-top: 8px;
 `
 
-const ContentBottom = styled.div`
+const MutedText = styled.div`
   display: flex;
+  width: 15px;
+  height: 15px;
 `
 
 const Button = styled.button`
