@@ -29,6 +29,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  color: #334680;
+
 }
 ol, ul {
 	list-style: none;
