@@ -1,1 +1,1 @@
-export * from './icons/schedule_icon';
+export * from './icons';

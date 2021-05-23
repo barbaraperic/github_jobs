@@ -4,10 +4,12 @@ export const blue = {
 };
 
 export const neutral = {
-  100: "#ffffff",
-  200: "#F6F7FB",
-  300: "#B9BDCF",
-  400: "#282538",
+  100: "#B9BDCF", // location and time
+  200: "#B7BCCE", // letters
+  300: "#F2F2F2", // image
+  400: "#F6F7FB", // background
+  500: "#BDBDBD", // letters on image
   600: "#000000"
 };
+
 

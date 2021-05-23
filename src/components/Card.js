@@ -1,30 +1,48 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ScheduleIcon } from "../assets";
+import PropTypes from 'prop-types';
+import { ScheduleIcon, WorldIcon } from "../assets";
+import { blue } from "../utils"
+import DefaultImage from './DefaultImage'
 
-const Card = () => {
+const Card = ({ imageSrc, label, title, type, location, time }) => {
   return (
     <Wrapper>
-      <Image src="https://source.unsplash.com/random"/>
+      { imageSrc 
+        ? <Image src={imageSrc} alt="logo"/>
+        : <DefaultImage />
+      }
       <Content>
-        <Label>kaisto</Label>
-        <Title>Senior Engineer</Title>
-        <Button>Hey</Button>
+        <Label>{label}</Label>
+        <Title>{title}</Title>
+        { type ? <Button>{type}</Button> : null }
       </Content>
-      <MutedText>
-        <ScheduleIcon />
-      </MutedText>
+      <MutedTextWrapper>
+        <MutedText>
+          <IconWrapper>
+            <WorldIcon />
+          </IconWrapper>
+          <small>{location}</small>
+        </MutedText>
+        <MutedText>
+          <IconWrapper>
+            <ScheduleIcon />
+          </IconWrapper>
+          <small>{time}</small>
+        </MutedText>
+      </MutedTextWrapper>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
   width: 800px;
-  /* height: 114px; */
   display: flex;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
   padding: 12px;
   border-radius: 4px;
+  margin-bottom: 32px;
+  background-color: white;
 `
 
 const Image = styled.img`
@@ -50,12 +68,6 @@ const Title = styled.h2`
   margin-top: 8px;
 `
 
-const MutedText = styled.div`
-  display: flex;
-  width: 15px;
-  height: 15px;
-`
-
 const Button = styled.button`
   background-color: transparent;
   border-radius: 4px;
@@ -64,6 +76,42 @@ const Button = styled.button`
   width: 63px;
   margin-top: 12px;
   font-size: 12px;
+  color: ${blue[100]};
 `
+
+const MutedTextWrapper = styled.div`
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+`
+
+const MutedText = styled.div`
+  display: flex;
+  align-items: center;
+  &:not(:last-child) {
+    margin-right: 27px;
+  }
+`
+
+const IconWrapper = styled.div`
+  display: flex;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+`
+
+// Card.defaultProps = {
+//   imageSrc: "https://source.unsplash.com/random"
+// }
+
+Card.propTypes = {
+  imageSrc: PropTypes.string,
+  label: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  location: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
+}
 
 export default Card;

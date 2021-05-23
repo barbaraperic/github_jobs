@@ -1,11 +1,11 @@
 import React from 'react';
-import { GlobalStyle } from "../utils";
-import Card from "./Card"
+import { GlobalStyle } from "./utils";
+import Home from "./pages/Home"
 
 const App = () => {
   return (
     <React.Fragment>
-      <Card />
+      <Home />
       <GlobalStyle />
     </React.Fragment>
   )
