@@ -1,9 +1,13 @@
 import React from 'react';
+import { GlobalStyle } from "../utils";
 import Card from "./Card"
 
 const App = () => {
   return (
-    <Card />
+    <React.Fragment>
+      <Card />
+      <GlobalStyle />
+    </React.Fragment>
   )
 }
 
