@@ -1,8 +1,9 @@
 import React from 'react';
+import Card from "./Card"
 
 const App = () => {
   return (
-    <h1>Hey</h1>
+    <Card />
   )
 }
 
