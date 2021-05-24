@@ -101,10 +101,6 @@ const IconWrapper = styled.div`
   margin-right: 8px;
 `
 
-// Card.defaultProps = {
-//   imageSrc: "https://source.unsplash.com/random"
-// }
-
 Card.propTypes = {
   imageSrc: PropTypes.string,
   label: PropTypes.string.isRequired,
