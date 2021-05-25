@@ -4,7 +4,7 @@ import Button from "./Button"
 import { Briefcase } from "../assets";
 import { neutral } from "../utils"
 
-const SearchBar = () => {
+const SearchBar = ({ placeholder}) => {
   return (
     <Wrapper>
       <IconWrapper>
