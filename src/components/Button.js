@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { blue } from "../utils"
 
-const Button = ({ className, children }) => {
+export const Button = ({ className, children }) => {
   return (
     <Wrapper className={className}>
       {children}
@@ -25,5 +25,3 @@ const Wrapper = styled.button`
     background-color: #1363c1;
   }
 `
-
-export default Button

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Checkbox from '../components/Checkbox';
+import Checkbox from '../components';
 
 const Sidebar = () => {
   const [checked, setChecked] = React.useState(false)

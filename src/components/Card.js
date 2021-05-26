@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { ScheduleIcon, WorldIcon } from "../assets";
 import { blue } from "../utils"
-import DefaultImage from './DefaultImage'
+import { DefaultImage } from './DefaultImage'
 
-const Card = ({ imageSrc, label, title, type, location, time }) => {
+export const Card = ({ imageSrc, label, title, type, location, time }) => {
   return (
     <Wrapper>
       { imageSrc 
@@ -109,5 +109,3 @@ Card.propTypes = {
   location: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired,
 }
-
-export default Card;

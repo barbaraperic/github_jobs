@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const RadioButton = () => {
+export const RadioButton = () => {
   return (
     <Wrapper>
       <InputRadio type="radio"/>
@@ -17,5 +17,3 @@ const Wrapper = styled.div`
 const InputRadio = styled.input`
   margin-right: 8px;
 `
-
-export default RadioButton;

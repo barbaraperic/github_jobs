@@ -1,17 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
-import Banner from "../containers/Banner"
-import Cards from '../containers/Cards'
-import Test from "../components/Test"
+// import styled from 'styled-components';
+// import { Banner, Cards } from "../containers"
+import { Test } from "../components/Test"
 
-const Home = () => {
+export const Home = () => {
   return (
-    <>
+    <React.Fragment>
+      <h1>Hello</h1>
       <Test />
       {/* <Banner /> */}
       {/* <Cards /> */}
-    </>
+    </React.Fragment>
   )
 }
-
-export default Home

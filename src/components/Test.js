@@ -1,20 +1,17 @@
 import React from 'react';
-import Checkbox from "./Checkbox"
-import RadioButton from "./RadioButton"
+import { RadioButton } from "./index"
 
-const Test = () => {
-  const [checked, setChecked] = React.useState(false)
+export const Test = () => {
+  // const [checked, setChecked] = React.useState(false)
 
-  const handleCheck = () => {
-    setChecked(!checked)
-  }
+  // const handleCheck = () => {
+  //   setChecked(!checked)
+  // }
 
   return (
-    <label>
+    <h1>Hi
       <RadioButton />
       <span>Label text</span>
-    </label>
+    </h1>
   )
 }
-
-export default Test

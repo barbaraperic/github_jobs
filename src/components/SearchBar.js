@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from "./Button"
+import { Button } from "./Button"
 import { Briefcase } from "../assets";
 import { neutral } from "../utils"
 
-const SearchBar = ({ placeholder }) => {
+export const SearchBar = ({ placeholder }) => {
   return (
     <Wrapper>
       <IconWrapper>
@@ -50,5 +50,3 @@ const StyledButton = styled(Button)`
   position: absolute;
   right: 4px;
 `
-
-export default SearchBar

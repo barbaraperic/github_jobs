@@ -6,11 +6,11 @@ const icons = {
   briefcase: briefcase
 }
 
-const Icon = ({ id }) => {
-  const Component = icons[id]
+export const Icon = ({ id }) => {
+  // const Component = icons[id]
   return (
     <Wrapper>
-      <Component />
+      {/* <Component /> */}
     </Wrapper>
   )
 }
@@ -18,6 +18,3 @@ const Icon = ({ id }) => {
 const Wrapper = styled.div`
 
 `
-
-export default Icon;
-
