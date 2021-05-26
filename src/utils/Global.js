@@ -26,4 +26,8 @@ ${normalize()}
     font-size: 12px;
   }
 
+  span {
+    font-size: 14px;
+  }
+
 `

@@ -3,8 +3,22 @@ import styled from 'styled-components';
 import Icon from "./Icon";
 import { neutral } from "../utils"
 
+const SearchBar = ({ placeholder, icon, width = 700, children }) => {
+  return (
+    <Wrapper
+    style={{"--width": width + 'px'}}
+    >
+      <IconWrapper>
+        <Icon id={icon} />
+      </IconWrapper>
+      <TextInput placeholder={placeholder} />
+      {children}
+    </Wrapper>
+  )
+}
+
 const Wrapper = styled.label`
-  width: 700px;
+   width: var(--width);
   position: relative;
   display: flex;
   align-items: center;
@@ -33,17 +47,6 @@ const IconWrapper = styled.div`
   height: 15px;
 `
 
-const SearchBar = ({ placeholder, icon, children }) => {
-  return (
-    <Wrapper>
-      <IconWrapper>
-        <Icon id={icon} />
-      </IconWrapper>
-      <TextInput placeholder={placeholder} />
-      {children}
-    </Wrapper>
-  )
-}
 
 
 
