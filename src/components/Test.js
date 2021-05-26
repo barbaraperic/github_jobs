@@ -1,6 +1,6 @@
 import React from 'react';
-import { RadioButton } from "./index"
-import { Icon } from "./index"
+import RadioButton from "./RadioButton"
+import Icon from "./Icon"
 
 export const Test = () => {
   // const [checked, setChecked] = React.useState(false)
@@ -15,7 +15,7 @@ export const Test = () => {
     //   <span>Label text</span>
     // </label>
     <>
-      <Icon id="briefcase"/>
+      <Icon id="globe"/>
     </>
   )
 }

@@ -1,39 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { ScheduleIcon, WorldIcon } from "../assets";
+// import { DefaultImage, Icon } from "./index";
+import DefaultImage from "./DefaultImage";
+import Icon from "./Icon";
 import { blue } from "../utils"
-import { DefaultImage } from './DefaultImage'
-
-export const Card = ({ imageSrc, label, title, type, location, time }) => {
-  return (
-    <Wrapper>
-      { imageSrc 
-        ? <Image src={imageSrc} alt="logo"/>
-        : <DefaultImage />
-      }
-      <Content>
-        <Label>{label}</Label>
-        <Title>{title}</Title>
-        { type ? <Button>{type}</Button> : null }
-      </Content>
-      <MutedTextWrapper>
-        <MutedText>
-          <IconWrapper>
-            <WorldIcon />
-          </IconWrapper>
-          <small>{location}</small>
-        </MutedText>
-        <MutedText>
-          <IconWrapper>
-            <ScheduleIcon />
-          </IconWrapper>
-          <small>{time}</small>
-        </MutedText>
-      </MutedTextWrapper>
-    </Wrapper>
-  )
-}
 
 const Wrapper = styled.div`
   width: 800px;
@@ -101,6 +72,36 @@ const IconWrapper = styled.div`
   margin-right: 8px;
 `
 
+export const Card = ({ imageSrc, label, title, type, location, time }) => {
+  return (
+    <Wrapper>
+      { imageSrc 
+        ? <Image src={imageSrc} alt="logo"/>
+        : <DefaultImage />
+      }
+      <Content>
+        <Label>{label}</Label>
+        <Title>{title}</Title>
+        { type ? <Button>{type}</Button> : null }
+      </Content>
+      <MutedTextWrapper>
+        <MutedText>
+          <IconWrapper>
+            <Icon id="globe" />
+          </IconWrapper>
+          <small>{location}</small>
+        </MutedText>
+        <MutedText>
+          <IconWrapper>
+            <Icon id="clock" />
+          </IconWrapper>
+          <small>{time}</small>
+        </MutedText>
+      </MutedTextWrapper>
+    </Wrapper>
+  )
+}
+
 Card.propTypes = {
   imageSrc: PropTypes.string,
   label: PropTypes.string.isRequired,
@@ -109,3 +110,5 @@ Card.propTypes = {
   location: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired,
 }
+
+export default Card

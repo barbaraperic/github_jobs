@@ -2,14 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { neutral } from "../utils"
 
-export const DefaultImage = () => {
-  return (
-    <Wrapper>
-      <p>not found</p>
-    </Wrapper>
-  )
-}
-
 const Wrapper = styled.div`
   width: 90px;
   height: 90px;
@@ -21,3 +13,13 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
 `
+
+const DefaultImage = () => {
+  return (
+    <Wrapper>
+      <p>not found</p>
+    </Wrapper>
+  )
+}
+
+export default DefaultImage

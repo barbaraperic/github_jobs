@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Briefcase, Clock, Globe } from 'react-feather';
 
 const icons = {
@@ -8,17 +7,13 @@ const icons = {
   globe: Globe
 }
 
-export const Icon = ({ id, size }) => {
+const Icon = ({ id }) => {
   const Component = icons[id]
   return (
-    <Wrapper>
-      <Component color="#B7BCCE" size={size}/>
-    </Wrapper>
+    <div>
+      <Component color="#B7BCCE" size="16"/>
+    </div>
   )
 }
 
-const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  fill: #B7BCCE;
-`
+export default Icon

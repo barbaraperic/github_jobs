@@ -1,6 +1,6 @@
 import React from 'react';
 import { GlobalStyle } from "./utils";
-import { Home } from "./pages"
+import Home from "./pages/Home"
 
 const App = () => {
   return (

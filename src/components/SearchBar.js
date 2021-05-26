@@ -1,20 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button } from "./Button"
-import { Briefcase } from "../assets";
+import Icon from "./Icon";
 import { neutral } from "../utils"
-
-export const SearchBar = ({ placeholder }) => {
-  return (
-    <Wrapper>
-      <IconWrapper>
-        <Briefcase />
-      </IconWrapper>
-      <TextInput placeholder="Title, companies, expertise & benefits"/>
-      <StyledButton>Search</StyledButton>
-    </Wrapper>
-  )
-}
 
 const Wrapper = styled.label`
   width: 700px;
@@ -46,7 +33,18 @@ const IconWrapper = styled.div`
   height: 15px;
 `
 
-const StyledButton = styled(Button)`
-  position: absolute;
-  right: 4px;
-`
+const SearchBar = ({ placeholder, icon, children }) => {
+  return (
+    <Wrapper>
+      <IconWrapper>
+        <Icon id={icon} />
+      </IconWrapper>
+      <TextInput placeholder={placeholder} />
+      {children}
+    </Wrapper>
+  )
+}
+
+
+
+export default SearchBar

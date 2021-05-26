@@ -1,12 +1,14 @@
 import React from 'react';
 // import styled from 'styled-components';
 // import { Banner, Cards } from "../containers"
-import { Test } from "../components/Test"
+import Banner from "../containers/Banner";
 
-export const Home = () => {
+const Home = () => {
   return (
     <React.Fragment>
-      <Test />
+      <Banner />
     </React.Fragment>
   )
 }
+
+export default Home

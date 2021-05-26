@@ -43,7 +43,7 @@ const StyledCheckbox = styled.div`
   }
 `
 
-export const Checkbox = ({ className, checked, ...props }) => (
+const Checkbox = ({ className, checked, ...props }) => (
   <CheckboxContainer className={className}>
     <HiddenCheckbox checked={checked} {...props} />
     <StyledCheckbox checked={checked}>
@@ -53,3 +53,5 @@ export const Checkbox = ({ className, checked, ...props }) => (
     </StyledCheckbox>
   </CheckboxContainer>
 )
+
+export default Checkbox
