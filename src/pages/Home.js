@@ -6,10 +6,7 @@ import { Test } from "../components/Test"
 export const Home = () => {
   return (
     <React.Fragment>
-      <h1>Hello</h1>
       <Test />
-      {/* <Banner /> */}
-      {/* <Cards /> */}
     </React.Fragment>
   )
 }

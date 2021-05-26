@@ -1,5 +1,6 @@
 import React from 'react';
 import { RadioButton } from "./index"
+import { Icon } from "./index"
 
 export const Test = () => {
   // const [checked, setChecked] = React.useState(false)
@@ -9,9 +10,12 @@ export const Test = () => {
   // }
 
   return (
-    <h1>Hi
-      <RadioButton />
-      <span>Label text</span>
-    </h1>
+    // <label>
+    //   <RadioButton />
+    //   <span>Label text</span>
+    // </label>
+    <>
+      <Icon id="briefcase"/>
+    </>
   )
 }

@@ -1,20 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import { briefcase } from 'react-feather';
+import { Briefcase, Clock, Globe } from 'react-feather';
 
 const icons = {
-  briefcase: briefcase
+  briefcase: Briefcase,
+  clock: Clock,
+  globe: Globe
 }
 
-export const Icon = ({ id }) => {
-  // const Component = icons[id]
+export const Icon = ({ id, size }) => {
+  const Component = icons[id]
   return (
     <Wrapper>
-      {/* <Component /> */}
+      <Component color="#B7BCCE" size={size}/>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
-
+  width: 100%;
+  height: 100%;
+  fill: #B7BCCE;
 `
