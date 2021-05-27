@@ -38,6 +38,7 @@ const InputRadio = styled.input`
         width: 12px;
         height: 12px;
         margin: 2px;
+        margin: 12.5%;
         background: ${blue[200]};
       }
     }
@@ -49,7 +50,7 @@ const RadioButton = ({ className, checked, text, ...props }) => {
     <Item className={className}>
       <InputRadio type="radio" checked={checked} {...props}/>
       <RadioButtonLabel />
-      <p>{text}</p>
+      <span>{text}</span>
     </Item>
   )
 }
