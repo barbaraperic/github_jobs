@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-// import { DefaultImage, Icon } from "./index";
 import DefaultImage from "./DefaultImage";
 import Icon from "./Icon";
 import { blue } from "../utils"
 
 const Wrapper = styled.div`
-  width: 800px;
+  width: 600px;
   display: flex;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
   padding: 12px;

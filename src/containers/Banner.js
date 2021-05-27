@@ -27,15 +27,15 @@ const StyledButton = styled(Button)`
 const Banner = () => {
   return (
     <>
-    <Title><strong>GitHub</strong> jobs</Title>
-    <Wrapper>
-      <SearchBar
-        icon="briefcase"
-        placeholder="Title, companies, expertise or benefits"
-      >
-        <StyledButton>Search</StyledButton>
-      </SearchBar>
-    </Wrapper>
+      <Title><strong>GitHub</strong> jobs</Title>
+      <Wrapper>
+        <SearchBar
+          icon="briefcase"
+          placeholder="Title, companies, expertise or benefits"
+        >
+          <StyledButton>Search</StyledButton>
+        </SearchBar>
+      </Wrapper>
     </>
   )
 }

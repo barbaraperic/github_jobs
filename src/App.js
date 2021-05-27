@@ -1,11 +1,11 @@
 import React from 'react';
 import { GlobalStyle } from "./utils";
-import Sidebar from "./containers/Sidebar"
+import Home from "./pages/Home";
 
 const App = () => {
   return (
     <React.Fragment>
-      <Sidebar />
+      <Home />
       <GlobalStyle />
     </React.Fragment>
   )

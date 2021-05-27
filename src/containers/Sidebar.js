@@ -5,7 +5,7 @@ import Checkbox from "../components/Checkbox"
 import RadioButton from "../components/RadioButton"
 import LabelText from "../components/LabelText"
 
-const Sidebar = () => {
+const Sidebar = ({ className }) => {
   const [select, setSelect] = React.useState(null)
   const [checked, setChecked] = React.useState(false)
   
@@ -16,7 +16,7 @@ const Sidebar = () => {
   };
   
   return (
-    <div>
+    <Wrapper className={className}>
       <Label>
         <Checkbox 
           checked={checked}
@@ -55,11 +55,12 @@ const Sidebar = () => {
           onChange={(event) => handleSelectChange(event)}
           text="Berlin"
         />
-
       </RadioButtonWrapper>
-    </div>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.div``
 
 const Label = styled.label`
   margin-left: 12px;
@@ -77,6 +78,7 @@ const StyledRadioButton = styled(RadioButton)`
 
 const RadioButtonWrapper = styled.div`
   margin-top: 26px;
+  margin-left: 12px;
 `
 
 export default Sidebar
