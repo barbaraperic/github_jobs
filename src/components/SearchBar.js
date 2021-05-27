@@ -22,6 +22,7 @@ const Wrapper = styled.label`
   position: relative;
   display: flex;
   align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
 `
 
 const TextInput = styled.input`
