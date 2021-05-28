@@ -6,7 +6,7 @@ import Icon from "./Icon";
 import { blue } from "../utils"
 
 const Wrapper = styled.div`
-  width: 600px;
+  min-width: 500px;
   display: flex;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
   padding: 12px;

@@ -21,7 +21,12 @@ const Wrapper = styled.main`
 `
 
 const StyledSidebar = styled(Sidebar)`
-  flex-grow: 1;
+  min-width: 400px;
+  flex: 1;
+  /* flex-shrink: 99999999; */
+`
+
+const StyledCards = styled(Cards)`
 `
 
 export default Home
