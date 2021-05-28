@@ -1,11 +1,13 @@
 import React from 'react';
 import { GlobalStyle } from "./utils";
-import Home from "./pages/Home";
+import Test from './components/Test'
+// import Home from "./pages/Home";
 
 const App = () => {
   return (
     <React.Fragment>
-      <Home />
+      <Test />
+      {/* <Home /> */}
       <GlobalStyle />
     </React.Fragment>
   )

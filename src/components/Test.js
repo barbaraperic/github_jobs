@@ -1,21 +1,12 @@
 import React from 'react';
-import RadioButton from "./RadioButton"
-import Icon from "./Icon"
+import Pagination from './Pagination'
 
-export const Test = () => {
-  // const [checked, setChecked] = React.useState(false)
-
-  // const handleCheck = () => {
-  //   setChecked(!checked)
-  // }
-
+const Test = () => {
   return (
-    // <label>
-    //   <RadioButton />
-    //   <span>Label text</span>
-    // </label>
     <>
-      <Icon id="globe"/>
+      <Pagination />
     </>
   )
 }
+
+export default Test
