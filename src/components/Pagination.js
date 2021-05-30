@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { neutral } from "../utils"
+import { neutral, blue } from "../utils"
 
 const Pagination = () => {
   return (
@@ -17,9 +17,9 @@ const Pagination = () => {
       <PageNumberWrapper>
         <span>3</span>
       </PageNumberWrapper>
-      <PageNumberWrapper>
+      <PageSpreadWrapper>
         <span>...</span>
-      </PageNumberWrapper>
+      </PageSpreadWrapper>
       <PageNumberWrapper>
         <span>10</span>
       </PageNumberWrapper>
@@ -32,13 +32,27 @@ const Pagination = () => {
 
 const Wrapper = styled.div``
 
-const PageNumberWrapper = styled.div`
+const PageNumberWrapper = styled.button`
   border: 1px solid ${neutral[200]};
+  background-color: transparent;
   color: ${neutral[200]};
   display: inline-block;
   padding: 11px;
-  margin: 12px;
+  margin: 8px;
   border-radius: 4px;
+
+  &:hover {
+    border: 1px solid ${blue[200]};
+    color: ${blue[200]};
+    cursor: pointer;
+  }
+
+`
+
+const PageSpreadWrapper = styled.div`
+  color: ${neutral[200]};
+  display: inline-block;
+  margin: 8px;
 `
 
 export default Pagination;
