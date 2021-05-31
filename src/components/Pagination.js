@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { neutral, blue } from "../utils"
 
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+  const [pageNumberLimit, setPageNumberLimit] = useState(5)
+  const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5)
+  const [minPageNumberLimit, setMinPageNumberLimit] = useState(0)
+  
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
@@ -11,11 +15,21 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
 
   return (
     <Wrapper>
+      {/* <PageNumberWrapper>
+        <span>&lt;</span>
+      </PageNumberWrapper> */}
       {pageNumbers.map(number => (
-        <PageNumberWrapper onClick={() => paginate(number)}>
-          <span>{number}</span>
-        </PageNumberWrapper>
+        (number < maxPageNumberLimit + 1 && number > minPageNumberLimit) 
+        ?
+          <PageNumberWrapper onClick={() => paginate(number)} key={number}>
+            <span>{number}</span>
+          </PageNumberWrapper>
+
+        : null
       ))}
+      {/* <PageNumberWrapper>
+        <span>&gt;</span>
+      </PageNumberWrapper> */}
     </Wrapper>
   )
 }
@@ -39,7 +53,7 @@ const PageNumberWrapper = styled.button`
     cursor: pointer;
   }
 
-  &:active {
+  &:focus {
     background-color: ${blue[200]};
     color: white;
   }
