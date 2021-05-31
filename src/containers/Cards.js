@@ -8,7 +8,11 @@ const Cards = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(5);
+  const [postsPerPage, setPostsPerPage] = useState(3);
+
+  const [pageNumberLimit, setPageNumberLimit] = useState(5)
+  const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5)
+  const [minPageNumberLimit, setMinPageNumberLimit] = useState(0)
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -28,6 +32,21 @@ const Cards = () => {
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
   }
+
+  const handleNextPage = () => {
+    setCurrentPage(currentPage + 1)
+
+    if (currentPage + 1 > maxPageNumberLimit) {
+      setMaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit);
+      setMinPageNumberLimit(minPageNumberLimit + pageNumberLimit);
+    }
+  }
+
+  const handlePrevPage = () => {
+    if (currentPage !== 1) {
+      setCurrentPage(currentPage - 1)
+    }
+  }
   
   if (loading) {
     return <p>Loading</p>
@@ -46,10 +65,14 @@ const Cards = () => {
           time="5 days ago"
         />
       ))}
-      <Pagination 
+      <Pagination
         postsPerPage={postsPerPage} 
         totalPosts={posts.length} 
         paginate={paginate} 
+        handleNextPage={handleNextPage}
+        handlePrevPage={handlePrevPage}
+        maxPageNumberLimit={maxPageNumberLimit}
+        minPageNumberLimit={minPageNumberLimit}
       />
     </Wrapper>
   )

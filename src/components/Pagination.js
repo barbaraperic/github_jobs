@@ -2,10 +2,16 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { neutral, blue } from "../utils"
 
-const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
-  const [pageNumberLimit, setPageNumberLimit] = useState(5)
-  const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5)
-  const [minPageNumberLimit, setMinPageNumberLimit] = useState(0)
+const Pagination = (props) => {
+  const { 
+    postsPerPage, 
+    totalPosts, 
+    paginate,
+    maxPageNumberLimit,
+    minPageNumberLimit,
+    handleNextPage, 
+    handlePrevPage 
+  } = props
   
   const pageNumbers = [];
 
@@ -15,9 +21,9 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
 
   return (
     <Wrapper>
-      {/* <PageNumberWrapper>
+      <PageSpreadWrapper onClick={handlePrevPage}>
         <span>&lt;</span>
-      </PageNumberWrapper> */}
+      </PageSpreadWrapper>
       {pageNumbers.map(number => (
         (number < maxPageNumberLimit + 1 && number > minPageNumberLimit) 
         ?
@@ -27,9 +33,9 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
 
         : null
       ))}
-      {/* <PageNumberWrapper>
+      <PageSpreadWrapper onClick={handleNextPage}>
         <span>&gt;</span>
-      </PageNumberWrapper> */}
+      </PageSpreadWrapper>
     </Wrapper>
   )
 }
@@ -46,14 +52,19 @@ const PageNumberWrapper = styled.button`
   padding: 11px;
   margin: 8px;
   border-radius: 4px;
+  cursor: pointer;
 
   &:hover {
     border: 1px solid ${blue[200]};
     color: ${blue[200]};
-    cursor: pointer;
   }
 
   &:focus {
+    background-color: ${blue[200]};
+    color: white;
+  }
+
+  &:active {
     background-color: ${blue[200]};
     color: white;
   }
@@ -64,6 +75,7 @@ const PageSpreadWrapper = styled.div`
   color: ${neutral[200]};
   display: inline-block;
   margin: 8px;
+  cursor: pointer;
 `
 
 export default Pagination;
