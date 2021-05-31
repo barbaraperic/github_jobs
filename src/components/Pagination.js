@@ -47,6 +47,11 @@ const PageNumberWrapper = styled.button`
     cursor: pointer;
   }
 
+  &:active {
+    background-color: ${blue[200]};
+    color: white;
+  }
+
 `
 
 const PageSpreadWrapper = styled.div`
