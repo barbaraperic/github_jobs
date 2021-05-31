@@ -2,35 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import { neutral, blue } from "../utils"
 
-const Pagination = () => {
+const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+  const pageNumbers = [];
+
+  for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
+    pageNumbers.push(i);
+  }
+
   return (
     <Wrapper>
-      <PageNumberWrapper>
-        <span>&lt;</span>
-      </PageNumberWrapper>
-      <PageNumberWrapper>
-        <span>1</span>
-      </PageNumberWrapper>
-      <PageNumberWrapper>
-        <span>2</span>
-      </PageNumberWrapper>
-      <PageNumberWrapper>
-        <span>3</span>
-      </PageNumberWrapper>
-      <PageSpreadWrapper>
-        <span>...</span>
-      </PageSpreadWrapper>
-      <PageNumberWrapper>
-        <span>10</span>
-      </PageNumberWrapper>
-      <PageNumberWrapper>
-        <span>&gt;</span>
-      </PageNumberWrapper>
+      {pageNumbers.map(number => (
+        <PageNumberWrapper onClick={() => paginate(number)}>
+          <span>{number}</span>
+        </PageNumberWrapper>
+      ))}
     </Wrapper>
   )
 }
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  text-align: right;
+`
 
 const PageNumberWrapper = styled.button`
   border: 1px solid ${neutral[200]};
