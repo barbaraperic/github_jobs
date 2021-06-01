@@ -73,6 +73,7 @@ const Cards = () => {
         handlePrevPage={handlePrevPage}
         maxPageNumberLimit={maxPageNumberLimit}
         minPageNumberLimit={minPageNumberLimit}
+        currentPage={currentPage}
       />
     </Wrapper>
   )

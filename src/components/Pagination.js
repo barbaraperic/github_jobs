@@ -10,7 +10,8 @@ const Pagination = (props) => {
     maxPageNumberLimit,
     minPageNumberLimit,
     handleNextPage, 
-    handlePrevPage 
+    handlePrevPage,
+    currentPage
   } = props
   
   const pageNumbers = [];
@@ -21,27 +22,42 @@ const Pagination = (props) => {
 
   return (
     <Wrapper>
-      <PageSpreadWrapper onClick={handlePrevPage}>
-        <span>&lt;</span>
-      </PageSpreadWrapper>
+      <li>
+        <PageSpreadWrapper onClick={handlePrevPage}>
+          <span>&lt;</span>
+        </PageSpreadWrapper>
+      </li>
       {pageNumbers.map(number => (
         (number < maxPageNumberLimit + 1 && number > minPageNumberLimit) 
         ?
-          <PageNumberWrapper onClick={() => paginate(number)} key={number}>
+        <ListItem key={number}>
+          <PageNumberWrapper 
+            onClick={() => paginate(number)} key={number}
+            className={currentPage == number ? "active" : null}
+          >
             <span>{number}</span>
           </PageNumberWrapper>
+        </ListItem>
 
         : null
       ))}
-      <PageSpreadWrapper onClick={handleNextPage}>
-        <span>&gt;</span>
-      </PageSpreadWrapper>
+      <li>
+        <PageSpreadWrapper onClick={handleNextPage}>
+          <span>&gt;</span>
+        </PageSpreadWrapper>
+      </li>
     </Wrapper>
   )
 }
 
-const Wrapper = styled.div`
-  text-align: right;
+const Wrapper = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`
+
+const ListItem = styled.li`
+
 `
 
 const PageNumberWrapper = styled.button`
@@ -59,15 +75,15 @@ const PageNumberWrapper = styled.button`
     color: ${blue[200]};
   }
 
+  &.active {
+    background-color: ${blue[200]};
+    color: white;
+  }
+/* 
   &:focus {
     background-color: ${blue[200]};
     color: white;
-  }
-
-  &:active {
-    background-color: ${blue[200]};
-    color: white;
-  }
+  } */
 
 `
 
