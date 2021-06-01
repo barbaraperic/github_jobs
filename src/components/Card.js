@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import DefaultImage from "./DefaultImage";
+import Button from './Button';
 import Icon from "./Icon";
 import { blue } from "../utils"
 
@@ -38,37 +39,21 @@ const Title = styled.h2`
   margin-top: 8px;
 `
 
-const Button = styled.button`
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #334680;
-  padding: 6px;
-  width: 63px;
-  margin-top: 12px;
-  font-size: 12px;
-  color: ${blue[100]};
-`
-
-const MutedTextWrapper = styled.div`
+const IconWrapper = styled.div`
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 `
 
-const MutedText = styled.div`
-  display: flex;
-  align-items: center;
-  &:not(:last-child) {
+const StyledIcon = styled(Icon)`
+ &:not(:last-of-type) {
     margin-right: 27px;
   }
 `
 
-const IconWrapper = styled.div`
-  display: flex;
-  width: 15px;
-  height: 15px;
-  margin-right: 8px;
+const StyledButton = styled(Button)`
+  margin-top: 12px;
 `
 
 export const Card = ({ imageSrc, label, title, type, location, time }) => {
@@ -81,22 +66,12 @@ export const Card = ({ imageSrc, label, title, type, location, time }) => {
       <Content>
         <Label>{label}</Label>
         <Title>{title}</Title>
-        { type ? <Button>{type}</Button> : null }
+        { type ? <StyledButton variant='outline'>{type}</StyledButton> : null }
       </Content>
-      <MutedTextWrapper>
-        <MutedText>
-          <IconWrapper>
-            <Icon id="globe" />
-          </IconWrapper>
-          <small>{location}</small>
-        </MutedText>
-        <MutedText>
-          <IconWrapper>
-            <Icon id="clock" />
-          </IconWrapper>
-          <small>{time}</small>
-        </MutedText>
-      </MutedTextWrapper>
+      <IconWrapper>
+          <StyledIcon id="globe" text={location} />
+          <StyledIcon id="clock" text={time} />
+      </IconWrapper>
     </Wrapper>
   )
 }

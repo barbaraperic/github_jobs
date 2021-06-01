@@ -5,7 +5,8 @@ import LabelText from "../components/LabelText"
 import { blue } from '../utils'
 
 const Wrapper = styled.div`
-  max-width: 230px;
+  max-width: 265px;
+  padding-right: 45px;
 `
 
 const StyledLabelText = styled(LabelText)`

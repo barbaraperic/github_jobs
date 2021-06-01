@@ -1,11 +1,30 @@
 import React from 'react';
-// import styled from 'styled-components';
+import styled from 'styled-components';
+import Button from '../components/Button'
+import Icon from '../components/Icon';
+
+const MainWrapper = styled.main`
+
+`
+
+const Header = styled.header`
+  display: flex;
+  align-items: center;
+`
+
+const Title = styled.h2`
+  margin-right: 17px;
+`
 
 const Main = ({ className }) => {
   return (
-    <main className={className}>
-      <h2 style={{ textAlign: 'center'}}>Main Text</h2>
-    </main>
+    <MainWrapper className={className}>
+      <Header>
+        <Title>Front-End Software Engineer</Title>
+        <Button variant="outline">Full Time</Button>
+      </Header>
+      <Icon id="clock" text="5 days ago"/>
+    </MainWrapper>
   )
 }
 
