@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { blue } from "../utils"
 
-const Button = ({ variant, children }) => {
+const Button = ({ className, variant, children }) => {
   let Component;
   if (variant === 'fill') {
     Component = FilledButton
@@ -12,7 +12,7 @@ const Button = ({ variant, children }) => {
     Component = GhostButton
   }
   return (
-    <Component>{children}</Component>
+    <Component className={className} >{children}</Component>
   )
 }
 
