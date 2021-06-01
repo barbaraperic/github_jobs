@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import DefaultImage from "./DefaultImage";
 import Button from './Button';
 import Icon from "./Icon";
-import { blue } from "../utils"
+import Image from './Image'
 
 const Wrapper = styled.div`
   min-width: 500px;
@@ -14,14 +14,6 @@ const Wrapper = styled.div`
   border-radius: 4px;
   margin-bottom: 32px;
   background-color: white;
-`
-
-const Image = styled.img`
-  width: 90px;
-  height: 90px;
-  border-radius: 4px;
-  object-fit: cover;
-  margin-right: 16px;
 `
 
 const Content = styled.div`
@@ -60,7 +52,7 @@ export const Card = ({ imageSrc, label, title, type, location, time }) => {
   return (
     <Wrapper>
       { imageSrc 
-        ? <Image src={imageSrc} alt="logo"/>
+        ? <Image src={imageSrc} alt="logo" size="medium"/>
         : <DefaultImage />
       }
       <Content>
