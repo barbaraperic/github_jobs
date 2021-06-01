@@ -46,6 +46,11 @@ const Cards = () => {
     if (currentPage !== 1) {
       setCurrentPage(currentPage - 1)
     }
+    
+    if ((currentPage - 1) % pageNumberLimit === 0){
+      setMaxPageNumberLimit(maxPageNumberLimit - pageNumberLimit);
+      setMinPageNumberLimit(minPageNumberLimit - pageNumberLimit);
+    }
   }
   
   if (loading) {
