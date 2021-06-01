@@ -9,7 +9,6 @@ const Wrapper = styled.div`
   width: 100%;
   border-radius: 8px;
   margin-bottom: 42px;
-  margin-top: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
