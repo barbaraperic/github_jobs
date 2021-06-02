@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useRouteMatch } from 'react-router-dom';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import DefaultImage from "./DefaultImage";
@@ -48,7 +49,11 @@ const StyledButton = styled(Button)`
   margin-top: 12px;
 `
 
-export const Card = ({ imageSrc, label, title, type, location, time }) => {
+const Card = ({ imageSrc, label, title, type, location, time }) => {
+  const { url } = useRouteMatch()
+
+  console.log('url',url);
+
   return (
     <Wrapper>
       { imageSrc 
@@ -57,7 +62,7 @@ export const Card = ({ imageSrc, label, title, type, location, time }) => {
       }
       <Content>
         <Label>{label}</Label>
-        <Title>{title}</Title>
+        <Link >{title}</Link>
         { type ? <StyledButton variant='outline'>{type}</StyledButton> : null }
       </Content>
       <IconWrapper>
