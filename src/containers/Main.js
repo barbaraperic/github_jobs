@@ -49,7 +49,7 @@ const Main = ({ className }) => {
     <MainWrapper className={className}>
       <Header>
         <Title>Front-End Software Engineer</Title>
-        <Button variant="outline" size="small">Full Time</Button>
+        <Button variant="outline">Full Time</Button>
       </Header>
       <StyledIcon id="clock" text="5 days ago"/>
       <TopContent>

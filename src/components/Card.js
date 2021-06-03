@@ -63,7 +63,7 @@ const Card = ({ imageSrc, label, title, type, location, time }) => {
       <Content>
         <Label>{label}</Label>
         <Link >{title}</Link>
-        { type ? <StyledButton size="small" variant='outline'>{type}</StyledButton> : null }
+        { type ? <StyledButton variant='outline'>{type}</StyledButton> : null }
       </Content>
       <IconWrapper>
           <StyledIcon id="globe" text={location} />

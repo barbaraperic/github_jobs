@@ -12,8 +12,8 @@ import JobDetails from "./pages/JobDetails"
 const App = () => {
   return (
     <>
-    <Test />
-      {/* <Router>
+    {/* <Test /> */}
+      <Router>
         <Switch>
           <Route path="/" exact>
             <Home />
@@ -22,7 +22,7 @@ const App = () => {
             <JobDetails />
           </Route>
         </Switch>
-      </Router> */}
+      </Router>
       <GlobalStyle />
     </>
   )

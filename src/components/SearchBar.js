@@ -3,11 +3,9 @@ import styled from 'styled-components';
 import Icon from "./Icon";
 import { neutral } from "../utils"
 
-const SearchBar = ({ placeholder, icon, width = 700, children }) => {
+const SearchBar = ({ className, placeholder, icon, children }) => {
   return (
-    <Wrapper
-      style={{"--width": width + 'px'}}
-    >
+    <Wrapper className={className}>
       <IconWrapper>
         <Icon id={icon} />
       </IconWrapper>
@@ -18,7 +16,7 @@ const SearchBar = ({ placeholder, icon, width = 700, children }) => {
 }
 
 const Wrapper = styled.label`
-  width: var(--width);
+  width: 700px;
   position: relative;
   display: flex;
   align-items: center;
