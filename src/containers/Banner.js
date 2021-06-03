@@ -29,7 +29,7 @@ const Banner = () => {
           icon="briefcase"
           placeholder="Title, companies, expertise or benefits"
         >
-          <StyledButton variant="fill">Search</StyledButton>
+          <StyledButton variant="fill" size="large">Search</StyledButton>
         </SearchBar>
       </Wrapper>
     </>

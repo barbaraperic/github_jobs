@@ -6,7 +6,7 @@ import { neutral } from "../utils"
 const SearchBar = ({ placeholder, icon, width = 700, children }) => {
   return (
     <Wrapper
-    style={{"--width": width + 'px'}}
+      style={{"--width": width + 'px'}}
     >
       <IconWrapper>
         <Icon id={icon} />
@@ -18,7 +18,7 @@ const SearchBar = ({ placeholder, icon, width = 700, children }) => {
 }
 
 const Wrapper = styled.label`
-   width: var(--width);
+  width: var(--width);
   position: relative;
   display: flex;
   align-items: center;
@@ -47,8 +47,5 @@ const IconWrapper = styled.div`
   width: 15px;
   height: 15px;
 `
-
-
-
 
 export default SearchBar

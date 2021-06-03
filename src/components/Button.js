@@ -2,7 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import { blue } from "../utils"
 
-const Button = ({ className, variant, children }) => {
+const SIZES = {
+  small: {
+    width: 63 + 'px',
+  },
+  medium: {
+    width: 100 + 'px',
+  },
+  large: {
+    width: 146 + 'px'
+  }
+}
+
+const Button = ({ className, variant, children, size }) => {
+  const styles = SIZES[size]
+  
   let Component;
   if (variant === 'fill') {
     Component = FilledButton
@@ -12,7 +26,14 @@ const Button = ({ className, variant, children }) => {
     Component = GhostButton
   }
   return (
-    <Component className={className} >{children}</Component>
+    <Component 
+      className={className} 
+      style={{
+        "width": styles.width
+      }}
+    >
+      {children}
+    </Component>
   )
 }
 
@@ -21,13 +42,13 @@ const OutlineButton = styled.button`
   border-radius: 4px;
   border: 1px solid #334680;
   padding: 6px;
-  width: 63px;
+  width: var(--width);
   font-size: 12px;
   color: ${blue[100]};
 `
 
 const FilledButton = styled.button`
-  width: 146px;
+  width: var(--width);
   height: 47px;
   border-radius: 4px;
   background-color: ${blue[200]};
@@ -47,7 +68,7 @@ const GhostButton = styled.button`
   border-radius: 4px;
   border: 1px solid #334680;
   padding: 6px;
-  width: 63px;
+  width: var(--width);
   font-size: 12px;
   color: ${blue[100]};
 `
