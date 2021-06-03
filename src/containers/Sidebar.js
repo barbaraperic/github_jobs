@@ -25,10 +25,9 @@ const Sidebar = ({ className }) => {
         <span style={{ marginLeft: 8 }}>Full Time</span>
       </Label>
       <StyledLabelText text="Location" />
-      <SearchBar
+      <StyledSearchBar
         icon="globe"
         placeholder="City, state, zip code or country"
-        width="370"
       />
       <RadioButtonWrapper>
         <StyledRadioButton 
@@ -74,6 +73,10 @@ const StyledLabelText = styled(LabelText)`
 
 const StyledRadioButton = styled(RadioButton)`
   margin-bottom: 16px;
+`
+
+const StyledSearchBar = styled(SearchBar)`
+  width: 370px;
 `
 
 const RadioButtonWrapper = styled.div`

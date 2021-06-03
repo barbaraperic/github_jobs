@@ -17,9 +17,7 @@ const Wrapper = styled.div`
 
 const StyledSearchBar = styled(SearchBar)`
 
-  @media only screen and (max-width: 768px) {
-      width: 300px;
-  }
+  
 `
 
 const StyledButton = styled(Button)`

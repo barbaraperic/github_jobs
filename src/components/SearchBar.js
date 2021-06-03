@@ -21,6 +21,14 @@ const Wrapper = styled.label`
   display: flex;
   align-items: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+
+  @media (max-width: 920px) {
+    width: 600px;
+   } 
+
+  @media (max-width: 768px) {
+    width: 300px;
+   } 
 `
 
 const TextInput = styled.input`
@@ -32,8 +40,15 @@ const TextInput = styled.input`
 
   &::placeholder {
     font-size: 12px;
-    color: ${neutral[200]}
+    color: ${neutral[200]};
   }
+
+  @media (max-width: 768px) {
+    padding-right: 40%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   } 
 `
 
 const IconWrapper = styled.div`
