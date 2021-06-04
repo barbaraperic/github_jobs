@@ -62,7 +62,7 @@ const Card = ({ imageSrc, label, title, type, location, time }) => {
       }
       <Content>
         <Label>{label}</Label>
-        <Link >{title}</Link>
+        <Link to={`${url}job/${title}`} >{title}</Link>
         { type ? <StyledButton variant='outline'>{type}</StyledButton> : null }
       </Content>
       <IconWrapper>

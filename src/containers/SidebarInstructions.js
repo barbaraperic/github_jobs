@@ -20,12 +20,12 @@ const Text = styled.p`
 `
 
 const Email = styled.span`
-  color: ${blue[200]}
+  color: ${blue[200]};
 `
 
-const SidebarInstructions = () => {
+const SidebarInstructions = ({ className }) => {
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <LinkBack />
       <StyledLabelText text="How to apply"/>
       <Text>Please email a copy of your resume and online portfolio to <Email>wes@kasisto.com</Email></Text>

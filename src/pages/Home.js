@@ -18,15 +18,15 @@ const Home = () => {
 
 const Wrapper = styled.main`
   display: flex;
+
+  @media (max-width: 920px) {
+    display: block;
+   } 
 `
 
 const StyledSidebar = styled(Sidebar)`
   min-width: 400px;
   flex: 1;
-  /* flex-shrink: 99999999; */
-`
-
-const StyledCards = styled(Cards)`
 `
 
 export default Home

@@ -6,10 +6,24 @@ import Main from '../containers/Main';
 
 const Wrapper = styled.div`
   display: flex;
+
+  @media (max-width: 920px) {
+    display: block;
+   } 
+`
+
+const StyledSidebarInstructions = styled(SidebarInstructions)`
+  @media (max-width: 920px) {
+    max-width: none;
+   } 
 `
 
 const StyledMain = styled(Main)`
   flex-grow: 1;
+  @media (max-width: 920px) {
+    margin-top: 36px;
+    
+   } 
 `
 
 const JobDetails = () => {
@@ -17,7 +31,7 @@ const JobDetails = () => {
     <>
     <Logo />
     <Wrapper>
-      <SidebarInstructions />
+      <StyledSidebarInstructions />
       <StyledMain />
     </Wrapper>
     </>
