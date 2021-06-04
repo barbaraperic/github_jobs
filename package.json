@@ -27,13 +27,15 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "parcel": "^1.12.3",
+    "parcel-bundler": "^1.12.5",
     "prettier": "^2.3.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "dev": "parcel public/index.html"
+    "dev": "parcel public/index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
