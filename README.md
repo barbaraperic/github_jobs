@@ -39,7 +39,7 @@
 
 -This project took a 1 week.
 
--The purpose of this solo project was to practice the following programming concepts: React Routing, pagination and responsivness.
+-The purpose of this solo project was to practice the following programming concepts: React Routing, pagination and responsiveness.
 
 -Challenge of this project was to refactor code using custom hooks as well as building the pagination component.
 
