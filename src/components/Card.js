@@ -27,11 +27,6 @@ const Label = styled.p`
   font-size: 12px;
 `
 
-const Title = styled.h2`
-  font-size: 18px;
-  margin-top: 8px;
-`
-
 const IconWrapper = styled.div`
   flex-grow: 1;
   display: flex;
@@ -51,8 +46,6 @@ const StyledButton = styled(Button)`
 
 const Card = ({ imageSrc, label, title, type, location, time }) => {
   const { url } = useRouteMatch()
-
-  console.log('url',url);
 
   return (
     <Wrapper>

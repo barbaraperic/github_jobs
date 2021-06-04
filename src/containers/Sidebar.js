@@ -5,6 +5,31 @@ import Checkbox from "../components/Checkbox"
 import RadioButton from "../components/RadioButton"
 import LabelText from "../components/LabelText"
 
+const Wrapper = styled.div``
+
+const Label = styled.label`
+  margin-left: 12px;
+  margin-bottom: 33px;
+  display: inline-block;
+`
+
+const StyledLabelText = styled(LabelText)`
+  margin-bottom: 14px;
+`
+
+const StyledRadioButton = styled(RadioButton)`
+  margin-bottom: 16px;
+`
+
+const StyledSearchBar = styled(SearchBar)`
+  width: 370px;
+`
+
+const RadioButtonWrapper = styled.div`
+  margin-top: 26px;
+  margin-left: 12px;
+`
+
 const Sidebar = ({ className }) => {
   const [select, setSelect] = React.useState(null)
   const [checked, setChecked] = React.useState(false)
@@ -58,30 +83,5 @@ const Sidebar = ({ className }) => {
     </Wrapper>
   )
 }
-
-const Wrapper = styled.div``
-
-const Label = styled.label`
-  margin-left: 12px;
-  margin-bottom: 33px;
-  display: inline-block;
-`
-
-const StyledLabelText = styled(LabelText)`
-  margin-bottom: 14px;
-`
-
-const StyledRadioButton = styled(RadioButton)`
-  margin-bottom: 16px;
-`
-
-const StyledSearchBar = styled(SearchBar)`
-  width: 370px;
-`
-
-const RadioButtonWrapper = styled.div`
-  margin-top: 26px;
-  margin-left: 12px;
-`
 
 export default Sidebar

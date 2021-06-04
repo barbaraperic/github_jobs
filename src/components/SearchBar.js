@@ -3,18 +3,6 @@ import styled from 'styled-components';
 import Icon from "./Icon";
 import { neutral } from "../utils"
 
-const SearchBar = ({ className, placeholder, icon, children }) => {
-  return (
-    <Wrapper className={className}>
-      <IconWrapper>
-        <Icon id={icon} />
-      </IconWrapper>
-      <TextInput placeholder={placeholder} />
-      {children}
-    </Wrapper>
-  )
-}
-
 const Wrapper = styled.label`
   width: 700px;
   position: relative;
@@ -60,5 +48,17 @@ const IconWrapper = styled.div`
   width: 15px;
   height: 15px;
 `
+
+const SearchBar = ({ className, placeholder, icon, children }) => {
+  return (
+    <Wrapper className={className}>
+      <IconWrapper>
+        <Icon id={icon} />
+      </IconWrapper>
+      <TextInput placeholder={placeholder} />
+      {children}
+    </Wrapper>
+  )
+}
 
 export default SearchBar

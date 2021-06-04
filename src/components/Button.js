@@ -2,23 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { blue } from "../utils"
 
-const Button = ({ className, variant, children }) => {
-  
-  let Component;
-  if (variant === 'fill') {
-    Component = FilledButton
-  } else if (variant === 'outline') {
-    Component = OutlineButton
-  } else {
-    Component = OutlineButton
-  }
-  return (
-    <Component className={className}>
-      {children}
-    </Component>
-  )
-}
-
 const OutlineButton = styled.button`
   background-color: transparent;
   border-radius: 4px;
@@ -44,5 +27,22 @@ const FilledButton = styled.button`
     background-color: #1363c1;
   }
 `
+
+const Button = ({ className, variant, children }) => {
+  
+  let Component;
+  if (variant === 'fill') {
+    Component = FilledButton
+  } else if (variant === 'outline') {
+    Component = OutlineButton
+  } else {
+    Component = OutlineButton
+  }
+  return (
+    <Component className={className}>
+      {children}
+    </Component>
+  )
+}
 
 export default Button

@@ -8,14 +8,10 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://infallible-ptolemy-f08d8b.netlify.app">
       Demo
     </a>
-    <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
-      Solution
-    </a>
-    <span> | </span>
+    | </>
     <a href="https://devchallenges.io/challenges/TtUjDt19eIHxNQ4n5jps">
       Challenge
     </a>
@@ -31,29 +27,33 @@
   - [Built With](#built-with)
 - [Features](#features)
 - [How To Use](#how-to-use)
-- [Acknowledgements](#acknowledgements)
 - [Contact](#contact)
 
 <!-- OVERVIEW -->
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![mobile](https://i.postimg.cc/W48tnVpj/Screenshot-2021-06-04-at-12-07-29.png)
+![desktop](https://i.postimg.cc/0r18vX5c/Screenshot-2021-06-04-at-12-07-43.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+-This project took a 1 week.
+
+-The purpose of this solo project was to practice the following programming concepts: React Routing, pagination and responsivness.
+
+-Challenge of this project was to refactor code using custom hooks as well as building the pagination component.
+
+-Key learnings:
+
+* How to make React useEffect hook not run on initial render
+* Creating pagination component from scratch
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- [Styled Components](https://styled-components.com/)
 
 ## Features
 
@@ -69,7 +69,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/barbaraperic/github_jobs
 
 # Install dependencies
 $ npm install
@@ -78,16 +78,7 @@ $ npm install
 $ npm start
 ```
 
-## Acknowledgements
-
-<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
-
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
-
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- GitHub [barbaraperic](https://{github.com/barbaraperic})
+- Twitter [@brbr_p](https://{twitter.com/brbr_p})

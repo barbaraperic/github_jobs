@@ -2,6 +2,44 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { neutral, blue } from "../utils"
 
+const Wrapper = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`
+
+const ListItem = styled.li`
+
+`
+
+const PageNumberWrapper = styled.button`
+  border: 1px solid ${neutral[200]};
+  background-color: transparent;
+  color: ${neutral[200]};
+  display: inline-block;
+  padding: 11px;
+  margin: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid ${blue[200]};
+    color: ${blue[200]};
+  }
+
+  &.active {
+    background-color: ${blue[200]};
+    color: white;
+  }
+`
+
+const PageSpreadWrapper = styled.div`
+  color: ${neutral[200]};
+  display: inline-block;
+  margin: 8px;
+  cursor: pointer;
+`
+
 const Pagination = (props) => {
   const { 
     postsPerPage, 
@@ -49,49 +87,5 @@ const Pagination = (props) => {
     </Wrapper>
   )
 }
-
-const Wrapper = styled.ul`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-`
-
-const ListItem = styled.li`
-
-`
-
-const PageNumberWrapper = styled.button`
-  border: 1px solid ${neutral[200]};
-  background-color: transparent;
-  color: ${neutral[200]};
-  display: inline-block;
-  padding: 11px;
-  margin: 8px;
-  border-radius: 4px;
-  cursor: pointer;
-
-  &:hover {
-    border: 1px solid ${blue[200]};
-    color: ${blue[200]};
-  }
-
-  &.active {
-    background-color: ${blue[200]};
-    color: white;
-  }
-/* 
-  &:focus {
-    background-color: ${blue[200]};
-    color: white;
-  } */
-
-`
-
-const PageSpreadWrapper = styled.div`
-  color: ${neutral[200]};
-  display: inline-block;
-  margin: 8px;
-  cursor: pointer;
-`
 
 export default Pagination;
