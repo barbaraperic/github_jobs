@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import useCurrentPosts from '../hooks/useCurrentPosts';
 import Card from "../components/Card";
 import Pagination from "../components/Pagination";
 
 const Cards = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(3);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const [pageNumberLimit, setPageNumberLimit] = useState(5)
   const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5)
   const [minPageNumberLimit, setMinPageNumberLimit] = useState(0)
+  const [currentPosts] = useCurrentPosts(posts, postsPerPage, currentPage);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -25,9 +27,6 @@ const Cards = () => {
     fetchPosts();
   }, [])
 
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
